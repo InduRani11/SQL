@@ -20,3 +20,27 @@ SELECT * FROM Library_Management;
 
 Delete FROM Library_Management where B_id = 4;
 SELECT * FROM Library_Management;
+
+--Q1 
+CREATE TABLE Library_Management (
+    B_id INT,
+    StudentName VARCHAR(20),
+    AuthorName VARCHAR(20),
+    issueDate DATE,
+    returnDate DATE
+);
+
+INSERT INTO Library_Management VALUES (101, 'Indu','VK verma', '2025-01-31', '2025-02-01'),
+(202, 'Radha','VK verma', '2025-01-20', '2025-01-23'),
+(303, 'Aryan','H Sharma', '2025-01-14', '2025-02-01'),
+(404, 'Visu', 'RajaRam', '2025-01-5', '2025-01-18'),
+(502, 'Avi','H Sharma', '2025-01-06', '2025-01-24'),
+(602,'Ani','SH verma', '2025-01-04','2025-01-25'),
+(207, 'Isha','H Sharma', '2025-01-14', '2025-02-01'),
+(208, 'Varun', 'RajaRam', '2025-01-5', '2025-01-18'),
+(309, 'Ishant','H Sharma', '2025-01-06', '2025-01-24'),
+(180,'Emran','SH verma', '2025-01-04','2025-01-25');
+SELECT * FROM Library_Management;
+
+--Q2
+
