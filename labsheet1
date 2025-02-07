@@ -44,3 +44,22 @@ SELECT * FROM Library_Management;
 
 --Q2
 
+ CREATE TABLE Hostel_Management(
+  Hostel_id INT,
+  StudentName VARCHAR(20),
+  yearOfDegree VARCHAR(5),
+  Course VARCHAR(15),
+  BlockName VARCHAR(20),
+  roomNo INT
+ );
+ INSERT INTO Hostel_Management VALUES (2301,'Indu','2nd','B-tech','Red',101),
+ (2302,'Radha','2nd','B-tech','Green',102),
+ (2303,'Renu','2nd','BCA','Blue',105),
+ (2304,'Navin','3rd','B-tech','Yellow',103),
+ (2305,'tanu','2nd','B-tech','Red',108),
+ (2306,'Karun','2nd','BCA','Yellow',105),
+ (2307,'Javi','3rd','B-tech','Green',201),
+ (2308,'Umar','2nd','MCA','Blue',212),
+ (2309,'Yash','1st','MBA','Green',104),
+ (2310,'Gorav','4th','B-tech','Blue',109);
+ SELECT * FROM Hostel_Management;
