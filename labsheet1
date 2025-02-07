@@ -63,3 +63,25 @@ SELECT * FROM Library_Management;
  (2309,'Yash','1st','MBA','Green',104),
  (2310,'Gorav','4th','B-tech','Blue',109);
  SELECT * FROM Hostel_Management;
+
+--Q3
+
+CREATE TABLE Hospital_Management(
+  Patient_id INT,
+  PatientName VARCHAR(20),
+  Age INT,
+  Gender VARCHAR(8),
+  Disease VARCHAR(20),
+  VistDate DATE
+);
+INSERT INTO Hospital_Management VALUES (101,'Ram',34,'Male','cough','2025-01-31'),
+(102,'Rasmi',45,'Female','cold','2025-01-24'),
+(103,'Pavan',34,'Male','fever','2025-01-25'),
+(104,'Manoj',34,'Male','cough','2025-01-31'),
+(105,'Fatima',34,'Female','cold','2025-01-24'),
+(106,'Lakshay',34,'Male','fever','2025-01-25'),
+(107,'Gagan',34,'Male','cough','2025-01-31'),
+(108,'Harita',34,'Female','cold','2025-01-24'),
+(109,'Fisma',34,'Female','cold','2025-01-24'),
+(110,'Harsh',34,'Male','fever','2025-01-25');
+SELECT * FROM Hospital_Management;
