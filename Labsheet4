@@ -38,6 +38,8 @@ SELECT * FROM Employees WHERE Age BETWEEN 25 AND 35;
 ---Q4--Find all employees who joined before the year 2018.
 SELECT * FROM Employees WHERE JoiningDate < '2018-01-01';
 ---Q5 Retrieve the top 3 highest-paid employees in the company.
-
+-- SELECT * FROM Employees WHERE Salary BETWEEN (SELECT AVG(Salary)FROM Employees) and (SELECT MAX(Salary) FROM Employees)  ;
+SELECT top 3 Salary,Name FROM Employees ORDER BY Salary DESC ;
 --Q6--Find the department which has the highest average salary.
 SELECT * FROM Employees WHERE Age= (SELECT MIN(Age) FROM Employees) ;
+
