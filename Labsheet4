@@ -1,0 +1,43 @@
+
+CREATE TABLE Employees (
+EmpID INT PRIMARY KEY,
+Name VARCHAR(20),
+Age INT,
+Department VARCHAR(10),
+Salary DECIMAL(10,2),
+JoiningDate DATE
+);
+INSERT INTO Employees (EmpID, Name, Age, Department, Salary, JoiningDate) VALUES
+(1, 'Alice', 30, 'HR', 60000, '2019-06-15'),
+(2, 'Bob', 35, 'Finance', 75000, '2018-08-20'),
+(3, 'Charlie', 28, 'IT', 55000, '2020-03-10'),
+(4, 'David', 40, 'Finance', 90000, '2016-12-01'),
+(5, 'Eve', 32, 'IT',62000, '2017-07-18');
+
+-- fetch 
+SELECT * FROM Employees;
+-- SELECT COUNT(*) AS TotalEmployees FROM Employees;
+-- SELECT AVG(Salary) AS AverageSalary FROM Employees;
+-- SELECT MAX(Salary) AS HighestSalary, MIN(Salary) AS LowestSalary FROM Employees;
+-- SELECT Department, SUM(Salary) AS TotalSalary FROM Employees GROUP BY
+-- Department;
+SELECT Department, COUNT(*) AS EmployeeCount FROM Employees GROUP BY
+Department;
+SELECT * FROM Employees WHERE Salary BETWEEN 60000 AND 80000;
+SELECT * FROM Employees WHERE JoiningDate BETWEEN '2017-01-01' AND '2019-12-31';
+SELECT * FROM Employees WHERE Age > 30 AND Department = 'IT';
+SELECT Department, AVG(Salary) AS AvgSalary FROM Employees GROUP BY Department HAVING COUNT(*) > 1;
+SELECT Department, SUM(Salary) AS TotalSalary FROM Employees GROUP BY Department ORDER BY TotalSalary DESC;
+
+-- Q1----Write a query to find the total salary expenditure of the IT and HR departments combined.
+SELECT Department, SUM(Salary) AS TotalSalary FROM Employees WHERE Department='HR' or Department='IT' GROUP BY Department ;
+-- Q2-----Find the youngest employee in the company.
+SELECT * FROM Employees WHERE Age= (SELECT MIN(Age) FROM Employees) ;
+-- Q3--List employees whose age is between 25 and 35.
+SELECT * FROM Employees WHERE Age BETWEEN 25 AND 35;
+---Q4--Find all employees who joined before the year 2018.
+SELECT * FROM Employees WHERE JoiningDate < '2018-01-01';
+---Q5 Retrieve the top 3 highest-paid employees in the company.
+
+--Q6--Find the department which has the highest average salary.
+SELECT * FROM Employees WHERE Age= (SELECT MIN(Age) FROM Employees) ;
